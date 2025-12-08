@@ -181,9 +181,26 @@ footer {
 }
 
 /* Mobile Responsive Adjustments */
+/* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
+    /* Adjustments for the whole navbar layout */
+    .navbar {
+        flex-direction: column; /* Stack logo and links vertically */
+        align-items: flex-start; /* Align everything to the left */
+    }
+    
     .nav-links {
-        display: none; /* In a real project, you would add a hamburger menu here */
+        /* Make the links visible again */
+        display: flex; 
+        /* Change from row to column for mobile links */
+        flex-direction: column;
+        width: 100%; /* Take full width */
+        margin-top: 1rem; /* Add some space below the logo */
+    }
+    
+    .nav-links li {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 0.75rem; /* Add space between stacked links */
     }
     
     .hero h1 {
